@@ -1,0 +1,45 @@
+Source: print-manager
+Section: kde
+Priority: optional
+Uploaders: Sune Vuorela <sune@debian.org>, Maximiliano Curia <maxy@debian.org>
+Build-Depends: cmake (>= 2.8.12),
+               debhelper (>= 9),
+               extra-cmake-modules (>= 1.3.0),
+               kio-dev,
+               libcups2-dev (>= 1.5),
+               libkf5config-dev,
+               libkf5configwidgets-dev,
+               libkf5coreaddons-dev,
+               libkf5dbusaddons-dev,
+               libkf5i18n-dev,
+               libkf5iconthemes-dev,
+               libkf5itemviews-dev,
+               libkf5kcmutils-dev,
+               libkf5notifications-dev,
+               libkf5widgetsaddons-dev,
+               libkf5windowsystem-dev,
+               libkf5plasma-dev,
+               pkg-config,
+               pkg-kde-tools (>> 0.15.15),
+               qtbase5-dev (>= 5.3.0~),
+               qtdeclarative5-dev (>= 5.3.0~),
+               qttools5-dev (>= 5.3)
+Standards-Version: 3.9.6
+Homepage: http://www.kde.org/
+Vcs-Git: https://anongit.neon.kde.org/kde/print-manager
+Vcs-Browser: https://packaging.neon.kde.org/kde/print-manager.git
+Maintainer: Neon CI <neon@kde.org>
+
+Package: print-manager
+Architecture: any
+Depends: plasma-framework, ${misc:Depends}, ${shlibs:Depends}
+Recommends: cups, system-config-printer, system-config-printer-udev
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
+Description: printer configuration and monitoring tools
+ This package provides a KDE configuration module and a Plasma widget for
+ installing and configuring printers, and monitoring printers, print jobs and
+ print queues.
+ .
+ This package is part of the KDE utilities module.
+
